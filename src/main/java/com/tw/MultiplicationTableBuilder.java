@@ -23,4 +23,8 @@ public class MultiplicationTableBuilder {
                 .mapToObj(i -> generateExpression(i, end))
                 .collect(Collectors.joining(" "));
     }
+
+    public String generateTable(int start, int end) {
+        return "";
+    }
 }

@@ -173,4 +173,19 @@ class MultiplicationTableBuilderTest {
         String expectedLine = "2*4=8 3*4=12 4*4=16";
         assertTrue(line.equals(expectedLine));
     }
+
+    @Test
+    void should_return_correct_table_when_generateTable_given_start_2_and_end_4() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 4;
+
+        // When
+        String table = multiplicationTableBuilder.generateTable(start, end);
+
+        // Then
+        String expectedTable = "2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16";
+        assertTrue(table.equals(expectedTable));
+    }
 }
