@@ -158,4 +158,19 @@ class MultiplicationTableBuilderTest {
         String expectedExpression = "2*4=8";
         assertTrue(expression.equals(expectedExpression));
     }
+
+    @Test
+    void should_return_correct_line_when_generateLine_given_start_2_and_end_4() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 4;
+
+        // When
+        String line = multiplicationTableBuilder.generateLine(start, end);
+
+        // Then
+        String expectedLine = "2*4=8 3*4=12 4*4=16";
+        assertTrue(line.equals(expectedLine));
+    }
 }
