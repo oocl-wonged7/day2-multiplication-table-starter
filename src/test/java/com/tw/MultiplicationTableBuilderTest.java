@@ -143,4 +143,19 @@ class MultiplicationTableBuilderTest {
         // Then
         assertFalse(isValid);
     }
+
+    @Test
+    void should_return_correct_expression_when_generateExpression_given_input1_2_and_input2_4() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int input1 = 2;
+        int input2 = 4;
+
+        // When
+        String expression = multiplicationTableBuilder.generateExpression(input1, input2);
+
+        // Then
+        String expectedExpression = "2*4=8";
+        assertTrue(expression.equals(expectedExpression));
+    }
 }

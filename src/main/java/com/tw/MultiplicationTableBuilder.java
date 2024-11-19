@@ -10,4 +10,8 @@ public class MultiplicationTableBuilder {
     public boolean isValid(int start, int end) {
         return start > 1 && start <= 1000 && end > 1 && end <= 1000;
     }
+
+    public String generateExpression(int input1, int input2) {
+        return "";
+    }
 }
