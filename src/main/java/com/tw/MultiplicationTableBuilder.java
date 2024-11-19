@@ -25,6 +25,8 @@ public class MultiplicationTableBuilder {
     }
 
     public String generateTable(int start, int end) {
-        return "";
+        return IntStream.rangeClosed(start, end)
+                .mapToObj(i -> generateLine(start, i))
+                .collect(Collectors.joining("\n"));
     }
 }
