@@ -5,6 +5,6 @@ public class MultiplicationTableBuilder {
         return number > 0 && number <= 1000;
     }
     public boolean isStarterNotBiggerThanEnd(int start, int end) {
-        return false;
+        return start <= end;
     }
 }
